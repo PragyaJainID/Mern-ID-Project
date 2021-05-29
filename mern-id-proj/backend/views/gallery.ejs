@@ -1,0 +1,36 @@
+
+<%- include('partials/header'); -%>
+
+<nav class="navbar">
+    <div class="brand-title">Deep Space Website</div>
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+        <ul>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/updateData">Update</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<% usersData.forEach(function(user){ %>
+    <div class="card">
+        <img src="https://picsum.photos/200" alt="Avatar" >
+        <div class="container">
+            <h4 style="color:white"><b><%=user.name%></b></h4>
+            <p style="color:white">College: <%=user.college%></p> 
+            <p style="color:white">Branch:  <%=user.branch%></p> 
+        </div>
+    </div>
+<% }) %>
+
+<!-- <% usersData.forEach(function(user){ %>
+    <p><%=user.name%></p>
+    <p><%=user.college%></p>
+    <p><%=user.branch%></p>
+<% }) %> -->
+
+<%- include('partials/footer'); -%>
